@@ -27,7 +27,8 @@ const App = () => {
 
             onDrag: function () {
                 setRotation(
-                    this.rotation - 360 * Math.floor(this.rotation / 360)
+                    Math.floor(this.rotation / 10) * 10
+                    // this.rotation - 360 * Math.floor(this.rotation / 360)
                 );
             },
         });
