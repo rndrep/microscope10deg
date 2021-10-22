@@ -21,7 +21,7 @@ gsap.registerPlugin(Draggable);
 const App = () => {
     const [rotation, setRotation] = useState(0);
     const smooth = true;
-    const step = xpl.length === 36 ? 10 : 1;
+    // const step = xpl.length === 36 ? 10 : 1;
     useEffect(() => {
         Draggable.create(".wheel", {
             type: "rotation",
