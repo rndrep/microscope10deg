@@ -26,18 +26,18 @@ const App = () => {
         Draggable.create(".wheel", {
             type: "rotation",
             minimumMovement: 1,
-            
+
             onDrag: function () {
                 console.log(this.rotation);
                 // градус поворота
                 setRotation(
-                    Math.floor(
-                        (this.rotation -
-                            360 * Math.floor(this.rotation / 360)) /
-                            10
-                    ) * 10
+                    // Math.floor(
+                    //     (this.rotation -
+                    //         360 * Math.floor(this.rotation / 360)) /
+                    //         10
+                    // ) * 10
 
-                    // this.rotation - 360 * Math.floor(this.rotation / 360)
+                    this.rotation - 360 * Math.floor(this.rotation / 360)
                 );
             },
         });
@@ -57,7 +57,8 @@ const App = () => {
                         />
                     </div>
 
-                    <p className="degrees">{Math.floor(rotation / 10) * 10}°</p>
+                    {/* <p className="degrees">{Math.floor(rotation / 10) * 10}°</p> */}
+                    <p className="degrees">{Math.floor(rotation)}°</p>
 
                     <div className="microscope-container">
                         <Overlay name="between crossed polars" />
